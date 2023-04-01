@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="{{ url_for('static', filename= 'css/styles.css') }}">
 	<title>Input Height and Weight!</title>
 </head>
 	<body>
 		<form method="post">
-			<label for="height">Enter your height (Feet and Inches): </label>
-			<input type="text" id="height" name="height"><br>
-			<label for="weight">Enter your weight (Pounds): </label>
+			<h1>Enter your height (Feet and Inches)</h1>
+			<label for="height_feet">Feet: </label>
+			<input type="text" id="height_feet" name="height_feet"><br>
+			<label for="height_inches">Inches: </label>
+			<input type="text" id="height_inches" name="height_inches"><br>
+			<h1>Enter your weight (Pounds)</h1>
+			<label for="weight">Weight: </label>
 			<input type="text" id="weight" name="weight"><br>
 			<input type="submit" value="Submit">
 		</form>
