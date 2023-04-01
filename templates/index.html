@@ -7,7 +7,8 @@
 </head>
 	<body>
 		<h1>BMI CALCULATION!</h1>
-		<h2>Your height {{ height }}, your weight {{ weight }}.</h2>
+
+		<h2>Your BMI {{ bmi }}, your BMI category {{ bmi_category }}.</h2>
 		
 		<form action="{{ url_for('index') }}" method="get">
 			<input type="submit" value="Reset Value">

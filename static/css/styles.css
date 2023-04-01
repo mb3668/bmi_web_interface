@@ -4,3 +4,16 @@ h1 {
 	text-align: center;
 	padding: 10px;
 }
+
+
+#height_feet {
+	margin: 5px;
+}
+
+#height_inches {
+	margin: 5px;
+}
+
+#weight {
+	margin: 5px;
+}
