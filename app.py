@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
-def calculate_bmi(bmi):
+def categorize_bmi(bmi):
 	"""
 	Categorize the user BMI into one of four categories
 
@@ -46,4 +46,4 @@ def bmi_submission():
 	print(int(total_height))
 	bmi = (int(weight) / total_height**2) * 703
 
-	return render_template('index.html', bmi=round(bmi, 2), bmi_category=calculate_bmi(bmi))
+	return render_template('index.html', bmi=round(bmi, 2), bmi_category=categorize_bmi(bmi))
