@@ -1,9 +1,6 @@
 import pytest
 import sys
 
-# Set path
-sys.path.append('..')
-
 from app import categorize_bmi
 
 """
