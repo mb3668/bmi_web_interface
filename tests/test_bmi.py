@@ -1,7 +1,6 @@
 import pytest
 import sys
 
-# Set path
 from app import categorize_bmi
 
 """
