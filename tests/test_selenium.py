@@ -33,11 +33,12 @@ def test_bmi_input(browser):
 	submit_button = browser.find_element("id", "submit")
 	submit_button.click()
 
-	
 	browser.get(f'http://127.0.0.1:5000/bmi_submission?height_feet={feet}&height_inches={inches}&weight={weight}')
 
 	# Test output
-	
+	bmi = "21.92"
+	category = "Normal"
+
 	# Extract result after click
 	result_element = browser.find_element("id", "result")
 	result_text = result_element.text
@@ -45,3 +46,4 @@ def test_bmi_input(browser):
 
 	# Run actual tests
 	assert browser.current_url == "http://127.0.0.1:5000/bmi_submission?height_feet=5&height_inches=7&weight=140"
+	assert result_text == f'Your BMI is {bmi}, your BMI category {category}.'
