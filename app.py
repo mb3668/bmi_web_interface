@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
+
 def categorize_bmi(bmi):
 	"""
 	Categorize the user BMI into one of four categories
@@ -23,6 +24,7 @@ def categorize_bmi(bmi):
 
 	return result
 
+
 @app.route('/', methods=['GET', 'POST'])
 def index():
 	if request.method == 'POST':
@@ -31,6 +33,7 @@ def index():
 		weight = request.form['weight']
 		return redirect(url_for('bmi_submission', height_feet=height_feet, height_inches=height_inches, weight=weight))
 	return render_template("form.html")
+
 
 @app.route('/bmi_submission')
 def bmi_submission():
