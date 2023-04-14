@@ -4,7 +4,7 @@ import pytest
 
 @pytest.fixture
 def browser():
-	path = "/driver/chromedriver.exe"
+	path = "driver/chromedriver"
 	selenium_service = Service(path)
 	driver = webdriver.Chrome(service=selenium_service)
 	yield driver
