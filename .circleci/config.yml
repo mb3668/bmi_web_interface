@@ -38,15 +38,6 @@ jobs:
           # app-dir: ~/project/package-directory/  # If you're requirements.txt isn't in the root directory.
           # pip-dependency-file: test-requirements.txt  # if you have a different name for your requirements file, maybe one that combines your runtime and test requirements.
       - run:
-          name: Install chromedriver
-          command: |
-            CHROMEDRIVER_VERSION=$(google-chrome-stable --version | grep -oP 'Chrome/\K\d+')
-            CHROMEDRIVER_URL="https://chromedriver.storage.googleapis.com/112.0.5615.50/chromedriver_linux64.zip"
-            curl -L -O $CHROMEDRIVER_URL
-            unzip chromedriver_linux64.zip
-            chmod +x chromedriver
-            sudo mv chromedriver /usr/local/bin/
-      - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
           command: pytest
